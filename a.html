@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .a{
+            width: 250px;
+            height: 250px;
+            margin: 200px auto;
+            background: #efbfa9;
+            border: 1px solid #666;
+            border-radius: 40px 100px 170px 60px;
+            position: relative;
+        }
+        .a::after{
+            content: "";
+            position: absolute;
+            left: -95%;
+            top: 50%;
+            transform: translateY(-50%); 
+            height: 190px;
+            width: 250px;
+            background:#efbfa9;
+            border-top: 1px solid #666; 
+            z-index: 9;
+        }
+        /* .a::before{
+            content: "";
+            position: absolute;
+            left: -95%;
+            top: 50%;
+            height: 190px;
+            width: 80px;
+            background:#efbfa9;
+            border: 1px solid #666; 
+            z-index: 9;
+        } */
+
+        .b{
+            position: absolute;
+            left: -5px;
+            top: 15px;
+            width: 250px;
+            height: 90px;
+            background: #efbfa9;
+            border-radius:0 80px 200px 0;
+            transform: rotate(-55deg) translateY(9px);
+            transform-origin:0 0 ;
+            border-top: 1px solid #666;
+            border-right: 1px solid #666;
+            z-index: 10;
+            overflow: hidden;
+        }
+        .b::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -30px;
+            transform: translate(-7px,5.5px) ;
+            height: 70px;
+            width: 70px;
+            /* border-radius: 20px 20px 0 20px; */
+            border-radius: 0px 20px 20px 10px;
+            background:-webkit-linear-gradient(right, #ffeae1 , #ffeae1);
+            /* border-bottom: 1px solid #666;  */
+            border-right: 1px solid #666; 
+            z-index: 9;
+        }
+        .b1{
+            position: absolute;
+            left: 105px;
+            top: -30px;
+            transform: translate(-7px,5.5px) ;
+            transform-origin:0 0 ;
+            height: 80px;
+            width: 80px;
+            /* border-radius: 20px 20px 0 20px; */
+            border-radius: 140px 0 0 140px;
+            background:#efbfa9;
+            /* border-bottom: 1px solid #666;  */
+            border-left: 1px solid #666; 
+            z-index: 9;
+        }
+        .b1::after{
+            content: "";
+            position: absolute;
+            left: 17px;
+            top: 0px;
+            transform: translate(-7px,5.5px) ;
+            transform-origin:0 0 ;
+            height: 70px;
+            width: 70px;
+            /* border-radius: 20px 20px 0 20px; */
+            border-radius: 140px 0 0 140px;
+            background:#efbfa9;
+            /* border-bottom: 1px solid #666;  */
+            border-left: 1px solid #666; 
+            z-index: 9;
+        }
+        .b1::before{
+            content: "";
+            position: absolute;
+            left: 30px;
+            top: -10px;
+            transform: translate(-7px,5.5px) ;
+            transform-origin:0 0 ;
+            height: 90px;
+            width: 90px;
+            /* border-radius: 20px 20px 0 20px; */
+            border-radius: 140px 0 0 140px;
+            background:#efbfa9;
+            /* border-bottom: 1px solid #666;  */
+            border-left: 1px solid #666; 
+            z-index: 19;
+        }
+        .c{
+            position: absolute;
+            right: -17px;
+            top: -6.5px;
+            transform: translate(-7px,5.5px) ;
+            transform-origin:0 0 ;
+            height: 75px;
+            width: 95px;
+            /* border-radius: 20px 20px 0 20px; */
+            border-radius: 0 220px 140px 0;
+            background:#efbfa9;
+            /* border-bottom: 1px solid #666;  */
+            border-top: 1px solid #666; 
+            border-right: 1px solid #666; 
+            z-index: 19;
+        }
+        .d{
+            position: absolute;
+            right: -25px;
+            top: 50px;
+            transform: translate(-7px,5.5px) ;
+            transform-origin:0 0 ;
+            height: 75px;
+            width: 75px;
+            /* border-radius: 20px 20px 0 20px; */
+            border-radius: 0 140px 140px 0;
+            background:#efbfa9;
+            /* border-bottom: 1px solid #666;  */
+            border-right: 1px solid #666; 
+            z-index: 19;
+        }
+        .e{
+            position: absolute;
+            right: -15px;
+            top: 110px;
+            transform: translate(-7px,5.5px) ;
+            transform-origin:0 0 ;
+            height: 75px;
+            width: 75px;
+            /* border-radius: 20px 20px 0 20px; */
+            border-radius: 0 140px 140px 0;
+            background:#efbfa9;
+            /* border-bottom: 1px solid #666;  */
+            border-right: 1px solid #666; 
+            z-index: 19;
+        }
+        .f{
+            position: absolute;
+            right: -5px;
+            top: 170px;
+            transform: translate(-7px,5.5px);
+            /* transform-origin:0 0 ; */
+            height: 75px;
+            width: 145px;
+            /* border-radius: 20px 20px 0 20px; */
+            border-radius: 0 140px 200px 0px;
+            background:#efbfa9;
+            /* border-bottom: 1px solid #666;  */
+            border-right: 1px solid #666; 
+            border-bottom: 1px solid #666; 
+            z-index: 19;
+        }
+        .up{
+            font-size: 30px;
+            color: red;
+            opacity: 0;
+            transition: all 0.2s; 
+        }
+        .upAction{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+            <div class="b">
+                <div class="b1"></div>
+            </div>
+            <div class="c"></div>
+            <div class="d"></div>
+            <div class="e"></div>
+            <div class="f"></div>
+    </div>
+    <div class="up">+1</div>
+    <script src="./node_modules/systemjs/dist/system.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./plug.js"></script>
+    <script>
+        SystemJS.config({
+            baseURL:'./'
+        });
+        SystemJS.import('./scripts/index-es.js').then(function(m){
+            $.extend({
+                Thumb:m.Thumb
+            });
+            callback();
+        });
+        function callback(){
+            var f=new $.Thumb(0,$('.a'));
+            f.clickAction();
+        }
+    </script>
+</body>
+</html>
